@@ -1,0 +1,54 @@
+<div class="container">
+    <span style="color: red;font-size: 18px;font-weight: bold;">
+        {{message}}
+        </span>
+     <hr/>
+     
+      <form class="form" [formGroup]="loginForm">
+      <label style="font-size: 18px;">Username</label>
+      <input type="text"  formControlName="username"  class="form-control" style="width:60%">
+      <span *ngIf="username?.invalid && username?.dirty" style="color:red;font-size:18px;font-weight: bold;">
+        Username is not valid!
+        <br/>
+    </span>
+      
+      <label style="font-size: 18px;">Password</label>
+      <input type="password"  formControlName="password"   class="form-control" style="width:60%">
+       <span *ngIf="password?.invalid && password?.dirty" style="color:blue;font-size:18px;font-weight: bold;">
+        Password min length is 5 chars!
+        <br/>
+    </span>
+    <br/>
+      <button type="button" [disabled]="!loginForm.valid"  class="btn btn-primary" (click)="validateUser();">Login</button>
+       &nbsp;&nbsp;
+      <button type="reset" class="btn btn-danger">Clear</button>
+      &nbsp;&nbsp;
+        <a routerLink="/signup">
+           <button type="button"   class="btn btn-success">Sign Up</button>
+        </a>
+        &nbsp;&nbsp;
+        <a routerLink="/resetpassword">
+        <button type="button"  class="btn btn-primary">Reset Password</button>
+        </a>
+
+    </form>
+    <hr/>
+
+     <div>
+          <h1>About Us</h1>
+          <input type="text" name="pname" class="form-control" #pname/>
+          <hr/>
+          <button type="button" (click)="process(pname)"  class="btn btn-danger">WOW!</button>
+          
+          <app-lifehook [cvalue]="pvalue">WOWO : {{pvalue}}
+          
+          </app-lifehook>
+
+     </div>
+
+     <br/>   <br/>
+    <br/>
+    
+  </div> 
+
+

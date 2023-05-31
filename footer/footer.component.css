@@ -1,0 +1,10 @@
+.tfooter {
+    position: fixed;
+    left: 0;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(8 25 44 / 25%);
+    color: white;
+    text-align: center;
+  }

@@ -1,0 +1,42 @@
+
+<div class="container">
+<hr/>
+     <h2>Signup Page!</h2>
+     <hr/>
+    <form>
+        <label style="font-size: 18px;">Username</label>
+        <input type="text" [(ngModel)]="signups.username"  name="username" class="form-control" style="width:60%">
+        
+        <label style="font-size: 18px;">Password</label>
+        <input type="password" [(ngModel)]="signups.password" name="password" class="form-control" style="width:60%">
+        
+        <label style="font-size: 18px;">Email</label>
+        <input type="email" [(ngModel)]="signups.email" name="email" class="form-control" style="width:60%">
+        
+        <label style="font-size: 18px;">Mobile</label>
+        <input type="number" [(ngModel)]="signups.mobile" name="mobile" class="form-control" style="width:60%">
+         <label style="font-size: 18px;">Image</label>
+        <input type="text" [(ngModel)]="signups.image" name="image" class="form-control" style="width:60%">
+        
+        <label style="font-size: 18px;">Gender</label>
+        <select  name="gender" [(ngModel)]="signups.gender" class="form-control" style="width:40%">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        
+           
+        <label style="font-size: 18px;">Address</label>
+        <textarea  name="address" [(ngModel)]="signups.address" class="form-control" style="width:60%"></textarea>
+        
+        
+         <br/>  
+
+        <button *ngIf="buttonShow"   type="button" (click)="signup();"  class="btn btn-primary">Signup</button>
+        <button *ngIf="!buttonShow" type="button" (click)="update();"  class="btn btn-primary">Update</button>
+        &nbsp;&nbsp;
+        <button type="reset" class="btn btn-danger">Clear</button>
+        
+      </form>
+      <br/><br/>
+      <br/><br/>
+    </div>
